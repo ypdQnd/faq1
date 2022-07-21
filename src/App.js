@@ -69,7 +69,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>My Notes App</h1>
+      <h1>YPD faq input form</h1>
       <input
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         placeholder="Title"
@@ -100,7 +100,27 @@ function App() {
         placeholder="Body text"
         value={formData.description}
       />
-
+      <p></p>
+      <span>Bullet 1: </span>
+      <input
+        onChange={(e) => setFormData({ ...formData, bullet1: e.target.value })}
+        placeholder="Bullet 1"
+        value={formData.bullet1}
+      />
+      <p></p>
+      <span>Bullet 2: </span>
+      <input
+        onChange={(e) => setFormData({ ...formData, bullet2: e.target.value })}
+        placeholder="Bullet 2"
+        value={formData.bullet2}
+      />
+      <p></p>
+      <span>Bullet 3: </span>
+      <input
+        onChange={(e) => setFormData({ ...formData, bullet3: e.target.value })}
+        placeholder="Bullet 3"
+        value={formData.bullet3}
+      />
       <p></p>
       <span>Media: </span>
       <input type="file" onChange={onChange} />
@@ -118,6 +138,9 @@ function App() {
                 {note.description}
               </textarea>
             </p>
+            <p>{note.bullet1}</p>
+            <p>{note.bullet2}</p>
+            <p>{note.bullet3}</p>
             {note.image && <img src={note.image} style={{ width: 400 }} />}
             <p></p>
             <button onClick={() => deleteNote(note)}>Delete note</button>
