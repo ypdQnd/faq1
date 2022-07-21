@@ -10,7 +10,16 @@ import {
 } from "./graphql/mutations";
 import "@aws-amplify/ui-react/styles.css";
 
-const initialFormState = { name: "", description: "" };
+const initialFormState = {
+  name: "",
+  description: "",
+  slug: "",
+  category: "",
+  tags: "",
+  bullet1: "",
+  bullet2: "",
+  bullet3: "",
+};
 
 function App() {
   const [notes, setNotes] = useState([]);
