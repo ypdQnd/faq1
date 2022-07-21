@@ -76,7 +76,12 @@ function App() {
         value={formData.name}
       />
       <p></p>
-
+      <input
+        onChange={(e) => setFormData({ ...formData, category: e.target.value })}
+        placeholder="Category"
+        value={formData.category}
+      />
+      <p></p>
       <textarea
         // <textarea
         rows={10}
@@ -97,6 +102,7 @@ function App() {
           <div key={note.id || note.name}>
             <p>= = = = = = = = = = = = = </p>
             <h2>{note.name}</h2>
+            <p>{note.category}</p>
             <p>
               <textarea rows={10} cols={50}>
                 {note.description}
