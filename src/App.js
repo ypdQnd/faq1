@@ -1,3 +1,4 @@
+// faq1 script
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import { API, Storage } from "aws-amplify";
