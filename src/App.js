@@ -76,13 +76,18 @@ function App() {
         value={formData.name}
       />
       <p></p>
-      <input
+
+      <textarea
+        // <textarea
+        rows={10}
+        cols={50}
         onChange={(e) =>
           setFormData({ ...formData, description: e.target.value })
         }
         placeholder="Note description"
         value={formData.description}
       />
+
       <p></p>
       <input type="file" onChange={onChange} />
       <p></p>
@@ -92,7 +97,11 @@ function App() {
           <div key={note.id || note.name}>
             <p>= = = = = = = = = = = = = </p>
             <h2>{note.name}</h2>
-            <p>{note.description}</p>
+            <p>
+              <textarea rows={10} cols={50}>
+                {note.description}
+              </textarea>
+            </p>
             {note.image && <img src={note.image} style={{ width: 400 }} />}
             <p></p>
             <button onClick={() => deleteNote(note)}>Delete note</button>
