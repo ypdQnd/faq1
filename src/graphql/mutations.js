@@ -13,6 +13,10 @@ export const createNote = /* GraphQL */ `
       image
       category
       slug
+      bullet1
+      bullet2
+      bullet3
+      tags
       createdAt
       updatedAt
     }
@@ -30,6 +34,10 @@ export const updateNote = /* GraphQL */ `
       image
       category
       slug
+      bullet1
+      bullet2
+      bullet3
+      tags
       createdAt
       updatedAt
     }
@@ -47,6 +55,10 @@ export const deleteNote = /* GraphQL */ `
       image
       category
       slug
+      bullet1
+      bullet2
+      bullet3
+      tags
       createdAt
       updatedAt
     }

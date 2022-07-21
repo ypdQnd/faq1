@@ -90,6 +90,13 @@ function App() {
         value={formData.category}
       />
       <p></p>
+      <span>Tags: </span>
+      <input
+        onChange={(e) => setFormData({ ...formData, tags: e.target.value })}
+        placeholder="Tags"
+        value={formData.tags}
+      />
+      <p></p>
       <textarea
         // <textarea
         rows={10}
@@ -131,16 +138,17 @@ function App() {
           <div key={note.id || note.name}>
             <p>= = = = = = = = = = = = = </p>
             <h2>{note.name}</h2>
-            <p>{note.slug}</p>
-            <p>{note.category}</p>
+            <p>"Slug" {note.slug}</p>
+            <p>"Category "{note.category}</p>
+            <p>"Tags" {note.tags}</p>
             <p>
               <textarea rows={10} cols={50}>
                 {note.description}
               </textarea>
             </p>
-            <p>{note.bullet1}</p>
-            <p>{note.bullet2}</p>
-            <p>{note.bullet3}</p>
+            <p>"Bullet 1" {note.bullet1}</p>
+            <p>"Bullet 2" {note.bullet2}</p>
+            <p>"Bullet 3" {note.bullet3}</p>
             {note.image && <img src={note.image} style={{ width: 400 }} />}
             <p></p>
             <button onClick={() => deleteNote(note)}>Delete note</button>

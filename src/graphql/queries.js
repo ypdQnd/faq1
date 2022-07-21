@@ -10,6 +10,10 @@ export const getNote = /* GraphQL */ `
       image
       category
       slug
+      bullet1
+      bullet2
+      bullet3
+      tags
       createdAt
       updatedAt
     }
@@ -29,6 +33,10 @@ export const listNotes = /* GraphQL */ `
         image
         category
         slug
+        bullet1
+        bullet2
+        bullet3
+        tags
         createdAt
         updatedAt
       }
