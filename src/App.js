@@ -72,10 +72,18 @@ function App() {
       <h1>My Notes App</h1>
       <input
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-        placeholder="Note name"
+        placeholder="Title"
         value={formData.name}
       />
       <p></p>
+      <span>Slug: </span>
+      <input
+        onChange={(e) => setFormData({ ...formData, slug: e.target.value })}
+        placeholder="Slug"
+        value={formData.slug}
+      />
+      <p></p>
+      <span>Category: </span>
       <input
         onChange={(e) => setFormData({ ...formData, category: e.target.value })}
         placeholder="Category"
@@ -89,11 +97,12 @@ function App() {
         onChange={(e) =>
           setFormData({ ...formData, description: e.target.value })
         }
-        placeholder="Note description"
+        placeholder="Body text"
         value={formData.description}
       />
 
       <p></p>
+      <span>Media: </span>
       <input type="file" onChange={onChange} />
       <p></p>
       <button onClick={createNote}>Create Note</button>
@@ -102,6 +111,7 @@ function App() {
           <div key={note.id || note.name}>
             <p>= = = = = = = = = = = = = </p>
             <h2>{note.name}</h2>
+            <p>{note.slug}</p>
             <p>{note.category}</p>
             <p>
               <textarea rows={10} cols={50}>
