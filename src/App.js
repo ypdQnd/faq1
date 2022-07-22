@@ -2,7 +2,15 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import { API, Storage } from "aws-amplify";
-import { withAuthenticator } from "@aws-amplify/ui-react";
+import {
+  withAuthenticator,
+  Button,
+  Heading,
+  Image,
+  View,
+  Card,
+} from "@aws-amplify/ui-react";
+// import { withAuthenticator } from "@aws-amplify/ui-react";
 import { listNotes } from "./graphql/queries";
 import {
   createNote as createNoteMutation,
@@ -21,7 +29,7 @@ const initialFormState = {
   bullet3: "",
 };
 
-function App() {
+function App({ signOut }) {
   const [notes, setNotes] = useState([]);
   const [formData, setFormData] = useState(initialFormState);
 
@@ -77,6 +85,7 @@ function App() {
 
   return (
     <div className="App">
+      <Button onClick={signOut}>Sign Out</Button>
       <h1>YPD faq input form</h1>
       <input
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
