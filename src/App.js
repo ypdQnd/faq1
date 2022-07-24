@@ -83,6 +83,8 @@ function App({ signOut }) {
     });
   }
 
+  async function editNote({ id }) {}
+
   return (
     <div className="App">
       <Button onClick={signOut}>Sign Out</Button>
@@ -168,6 +170,7 @@ function App({ signOut }) {
             <p>Bullet 3: {note.bullet3}</p>
             {note.image && <img src={note.image} style={{ width: 400 }} />}
             <p></p>
+            <button onClick={() => editNote(note)}>Edit note</button>
             <button onClick={() => deleteNote(note)}>Delete note</button>
           </div>
         ))}
