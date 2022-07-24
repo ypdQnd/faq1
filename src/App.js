@@ -15,6 +15,7 @@ import { listNotes } from "./graphql/queries";
 import {
   createNote as createNoteMutation,
   deleteNote as deleteNoteMutation,
+  updateNote as updateNoteMutation,
 } from "./graphql/mutations";
 import "@aws-amplify/ui-react/styles.css";
 
