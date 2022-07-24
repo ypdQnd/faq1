@@ -83,7 +83,12 @@ function App({ signOut }) {
     });
   }
 
-  async function editNote({ id }) {}
+  async function updateNote({ id }) {
+    await API.graphql({
+      query: updateNoteMutation,
+      variables: { input: { id } },
+    });
+  }
 
   return (
     <div className="App">
@@ -170,7 +175,10 @@ function App({ signOut }) {
             <p>Bullet 3: {note.bullet3}</p>
             {note.image && <img src={note.image} style={{ width: 400 }} />}
             <p></p>
-            <button onClick={() => editNote(note)}>Edit note</button>
+            <p>
+              {" "}
+              <button onClick={() => updateNote(note)}>Update note</button>
+            </p>
             <button onClick={() => deleteNote(note)}>Delete note</button>
           </div>
         ))}
