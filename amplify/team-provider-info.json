@@ -1,4 +1,17 @@
 {
+  "master": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-faq1-master-232124-authRole",
+      "UnauthRoleArn": "arn:aws:iam::294541267207:role/amplify-faq1-master-232124-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::294541267207:role/amplify-faq1-master-232124-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-faq1-master-232124-deployment",
+      "UnauthRoleName": "amplify-faq1-master-232124-unauthRole",
+      "StackName": "amplify-faq1-master-232124",
+      "StackId": "arn:aws:cloudformation:us-east-1:294541267207:stack/amplify-faq1-master-232124/d697e770-094b-11ed-b145-0e8ede2c6895",
+      "AmplifyAppId": "dcyqq8n3xatdj"
+    }
+  },
   "staging": {
     "awscloudformation": {
       "AuthRoleName": "amplify-amplify6059b17d342c4-staging-193331-authRole",
@@ -13,7 +26,27 @@
     },
     "categories": {
       "auth": {
-        "faq17d9e3d13": {}
+        "faq17d9e3d13": {},
+        "faq1926ce633": {}
+      }
+    }
+  },
+  "ypdrescue": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-faq1-ypdrescue-83135-authRole",
+      "UnauthRoleArn": "arn:aws:iam::294541267207:role/amplify-faq1-ypdrescue-83135-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::294541267207:role/amplify-faq1-ypdrescue-83135-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-faq1-ypdrescue-83135-deployment",
+      "UnauthRoleName": "amplify-faq1-ypdrescue-83135-unauthRole",
+      "StackName": "amplify-faq1-ypdrescue-83135",
+      "StackId": "arn:aws:cloudformation:us-east-1:294541267207:stack/amplify-faq1-ypdrescue-83135/886c6550-22df-11ed-9e7a-0a9127921d03",
+      "AmplifyAppId": "dcyqq8n3xatdj"
+    },
+    "categories": {
+      "auth": {
+        "faq17d9e3d13": {},
+        "faq1926ce633": {}
       }
     }
   }
