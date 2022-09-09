@@ -10,6 +10,11 @@
       "StackName": "amplify-faq1-master-232124",
       "StackId": "arn:aws:cloudformation:us-east-1:294541267207:stack/amplify-faq1-master-232124/d697e770-094b-11ed-b145-0e8ede2c6895",
       "AmplifyAppId": "dcyqq8n3xatdj"
+    },
+    "categories": {
+      "auth": {
+        "faq1f1f34210": {}
+      }
     }
   },
   "staging": {
